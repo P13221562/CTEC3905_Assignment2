@@ -184,3 +184,149 @@ header .overlay {
 	
 	
 }
+
+/* arrow button prompt properties*/
+#arrow-prompt {
+	font-size: 14px;
+}
+
+
+/*experience section starts here */
+#experience {
+	padding: 50px 50px;
+	background-color: #333;
+}
+#experience h3 {
+	font-size: 24px;
+	color: skyblue;
+	text-align: center;
+}
+
+#experience .row {
+	margin: 20px 0px;
+}
+
+#experience .row:last-of-type{
+	margin-bottom: 50px;
+}
+
+#experience .card-container, #experience .text {
+	-ms-flex: 3;
+	-moz-flex: 3;
+	flex: 3;
+}
+
+#experience .number {
+	-ms-flex: 1;
+	-moz-flex: 1;
+	flex: 1;
+	font-weight: bold;
+	color: white;
+}
+
+/* card flip animation */
+
+#experience .card-container {
+	perspective: 1000px;
+	position: relative;
+	display: inline-block;
+	height: 275px;
+}
+
+/* flips card for all other browsers */
+.card-container:hover .card {
+	transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	box-shadow: -5px 5px 10px #1f1f1f;
+}
+
+/* media query to perform card flip
+animation specifically for ie 10*/
+@media screen and (min-width:0\0) {
+	.card-container:hover .back-face {
+		-ms-transform: rotateY(0deg);
+		box-shadow: -5px 5px 10px #1f1f1f;
+	}
+
+	.card-container .front-face {
+	  -ms-transition: opacity .2 ease;
+	}
+
+	.card-container:hover .front-face {
+	   ms-transform: rotateY(270deg);
+	   opacity: 0;
+	}
+}
+
+.card {
+	display: block;
+	margin: 0 auto;
+	transition: .6s;
+	transform-style: preserve-3d;
+	height: 100%;
+	width: 100%;
+    transition: 0.6s;
+    position: relative;
+}
+
+.card .front-face, .card .back-face {
+	width: 100%;
+	height: 100%;
+	transition: all .06s ease-in-out;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+}
+
+/* front pane, placed above back */
+.card .front-face {
+	z-index: 10;
+	/* for firefox 31 */
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.card .back-face {
+	-ms-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+#experience .number {
+	align-items: center;
+	justify-content: center;
+	font-size: 3.5em;
+	animation: changeColor 5s ease infinite;
+	color: skyblue;
+}
+
+#experience .text {
+	text-align: left;
+	padding: 10px;
+	border: 5px solid skyblue;
+	background-color: white;
+}
+
+#experience .text p {
+	max-width: 400px;
+	color: #3F7674;
+	font-size: 18px;
+}
+
+#experience a {
+	color: black;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
