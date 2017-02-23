@@ -1,0 +1,127 @@
+#education #timeline {
+	background-color: blue;
+	border-radius: 50%;
+	width: 165px;
+	height: 165px;
+	justify-content: center;
+	align-items: center;
+	background: #3F7674;
+}
+
+#timeline p {
+	color: white;
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.line {
+	background: #3F7674;
+	width: 6px;
+	height: 0px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.point-general {
+	width:25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #3F7674;
+	position: relative;
+	position: absolute;
+	left: 50%;
+	top:-50px;
+	transform: translateX(-50%);
+	display: none;
+	transition: all .5s ease;
+}
+
+.line-general {
+	position: absolute;
+	width: 0px;
+	height: 2px;
+	background-color: black;
+	
+}
+
+.date-general {
+	position: absolute;
+	width: 200px;
+	opacity: 0;
+}
+
+/* point */
+.point1 {
+	
+}
+
+.line1 {
+	top: 42.5px;
+	left: 7px;
+}
+
+.date1 {
+	top: 30px;
+	left: 75px;
+}
+
+/* point 2 */
+.point2 {
+	
+}
+
+.line2 {
+	top: 102.5px;
+	left: -50px;
+}
+
+.date2 {
+	top: 100px;
+	left: -250px;
+}
+
+/* point 3 */
+.point3 {
+	
+}
+
+.line3 {
+	top: 162.5px;
+	left: 7px;
+}
+
+.date3 {
+	top: 150px;
+	left: 75px;
+}
+
+/* point 4 */
+.point4 {
+	
+}
+
+.line4 {
+	top: 222.5px;
+	left: -50px;
+}
+
+.date4 {
+	top: 222.5px;
+	left: -250px;
+}
+
+/* point 5 */
+.point5 {
+	
+}
+
+.line5 {
+	top: 282.5px;
+	left: 7px;
+}
+
+.date5 {
+	left: 75px;
+	top: 280px;
+}

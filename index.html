@@ -15,13 +15,13 @@
 
 		<!-- stylesheets -->
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/">
+		<link rel="stylesheet" href="css/timeline.css">
+		<link rel="stylesheet" href="css/mobile2.css">
 		
 	</head>
 	
 	<body>
 		<nav>
-		
 			<!-- navbar for desktop & larger screens -->
 			<ul class="flexbox">
 				<div class="nav-left">
@@ -49,19 +49,16 @@
 					<li onclick="smoothScroll('web-development')">Web Development</li>
 				</ul>
 			</div>
-			
-			<!-- allows user to close the menu bar -->
+			<!-- allows user to close the nav bar on mobile phone -->
 			<div onclick="closeNav();" class="transparent-overlay">
 			</div>
 		</nav>
 
-		
 		<!-- first section of the website : header -->
 		<header class="flexbox">
-			<div class="overlay">
-			</div>
+			<div class="overlay"></div>
 			<div class="header-content">
-			<!-- social media icons -->
+				<!-- social media icons -->
 				<div class="social-media flexbox">
 					<a href="https://www.facebook.com/ "><img src="images/facebook.png" width="35" height="35" alt="facebook"></a>
 					<a href="https://www.linkedin.com/ "><img src="images/linkedin.png" width="35" height="35" alt="linkedin"></a>
@@ -70,13 +67,12 @@
 				<img id="header-logo" src="images/logo.gif" height="125" width="125" alt="header logo">
 				<h1>Zain Mustafa</h1>
 				<h2>Welcome to my Professional Portfolio</h2>
-				<p id="arrow-prompt">CLICK HERE TO SCROLL DOWN</p>
-				<a id="experience-link" class="arrow" onclick="smoothScroll('experience')"><img src="images/down-arrow-white.png" width="50" height="50" alt="down arrow"></a>
-			</div>
+				<a id="experience-link" onclick="smoothScroll('experience')">SEE EXPERIENCE</a>
+				</div>
 		</header>
 
 		<main>
-		<!-- experience section starts -->
+		<!-- experience section starts here -->
 			<div id="experience">
 				<h3>EXPERIENCE</h3>
 				<div class="row flexbox">
@@ -86,7 +82,7 @@
 								<img src="images/business_card_2.png" alt="front of card design">
 							</div>
 							<div class="back-face">
-								<img src="images/work1.jpg" alt="back of card">
+								<img src="images/work1.JPG" alt="back of card">
 							</div>
 						</div>
 					</div>
@@ -159,7 +155,7 @@
 								<img src="images/business_card_2.png" alt="front of card design">
 							</div>
 							<div class="back-face">
-								<img src="images/work4.JPG" alt="back of card">
+								<img src="images/work4.jpg" alt="back of card">
 							</div>
 						</div>
 					</div>
@@ -176,7 +172,9 @@
 					</div>
 				</div>
 			</div>
-			<!-- education section starts here -->
+			<!-- education section starts here...
+			inspiration from: https://codepen.io/VincentCostentin/pen/khnAt -->
+			
 			<div id="education" class="flexbox">
 				<div class="container">
 					<div id="timeline" class="flexbox">
@@ -203,7 +201,19 @@
 						<div class="line-general line5"></div>
 						<p class="date-general date5">2017/2018 - Started Masters Degree </p>
 					</div>
-				</div>
+					</div>
+					<div id="mobile-timeline" class="flexbox">
+						<p>EDUCATION TIMELINE</p>
+					</div>
+
+					<div class="mobile-line">
+							<div class="point point1">2009 - Completed high school.</div>
+							<div class="point point2">2011 - Completed sixth form college</div>
+							<div class="point point3">2015 - Undertook a placement year in industry</div>
+							<div class="point point4">2017 - Graduated from De Montfort University with BSc Computer Science (Hons)</div>
+							<div class="point point5">2017/2018 - Started Masters Degree</div>
+					</div>
+						<a class="arrow" onclick="smoothScroll('interests')" ><img src="images/down-arrow-black.png" width="50" height="50" alt="down arrow"></a>
 			</div>
 
 			<!-- interests section starts here -->
@@ -258,7 +268,6 @@
 						</div>
 					</div>
 				</div>
-			
 			</div>
 			
 			<!-- contact me section here -->
@@ -334,5 +343,20 @@
   </div>
 
 		</main>
+		
+		<!-- scripts -->
+
+
+		<!--jQuery CDN. jQuery Documentation: http://api.jquery.com/
+		Reference : https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- plugin that detects when an element is in the viewport -->
+		<script type="text/javascript" src="javascripts/element-in-viewport.js"></script>
+		<!-- the following js contains code for timeline animation -->
+		<script type="text/javascript" src="javascripts/main.js"></script>
+
+		
+		
 	</body>
 </html>

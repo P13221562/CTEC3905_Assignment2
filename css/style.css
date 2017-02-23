@@ -25,15 +25,7 @@ a {
 	transition: all .5s ease;
 }
 
-/*allows user to see pointer when they hover over buttons*/
-a:hover, button:hover {
-	cursor: pointer;
-}
 
-/*allows user to hover over the scroll down arrow button */
-.arrow:hover {
-	cursor: pointer;
-}
 
 
 /* navigation bar properties are below */
@@ -185,11 +177,17 @@ header .overlay {
 	
 }
 
-/* arrow button prompt properties*/
-#arrow-prompt {
-	font-size: 14px;
+
+header #experience-link {
+	color: white;
+	background-color: #333 !important;
+	padding: 10px  5px;
+	transition: all .5s ease-in-out;
 }
 
+header #experience-link:hover {
+	background-color: black !important;
+}
 
 /*experience section starts here */
 #experience {
@@ -329,4 +327,36 @@ animation specifically for ie 10*/
 	text-align: center;
 	display: block;
 	margin: 0 auto;
+}
+
+/* education section starts here */
+#education {
+	margin-top: 50px;
+	min-height: 80vh;
+	margin: 20vh 0vh;
+	position:relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#education .container{
+	position: relative;
+}
+
+#mobile-timeline {
+	display: none;
+}
+
+.mobile-line {
+	display: none;
+}
+
+#education a {
+	font-size: 18px;
+	display: block;
+	vertical-align: middle;
+	max-height: 25px;
+	margin: 0 auto;
+	margin-top: 10px;
 }
