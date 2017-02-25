@@ -177,12 +177,9 @@ function checkErrors() {
 		message.style.boxShadow = " 0px 0px 5px 5px crimson";
 		message.placeholder = "You must enter a message";
 	}
-	else {
-		message.style.borderColor = "#3F7674";
-		message.style.boxShadow = " 0px 0px 5px 5px #3F7674";
-    correctCounter++;
-	}
+	
 
   sendEmail(correctCounter);
 }
+
 

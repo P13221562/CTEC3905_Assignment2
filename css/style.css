@@ -25,6 +25,15 @@ a {
 	transition: all .5s ease;
 }
 
+a:hover, button:hover {
+	cursor: pointer;
+}
+
+.arrow:hover {
+	cursor: pointer;
+}
+
+
 /* navigation bar properties are below */
 
 nav {
@@ -81,7 +90,7 @@ nav ul li:hover {
 	margin: 0px 5px;
 }
 
-/*about me button properties. important tells the item to ignore anything other properties being applied to the item*/
+/*about me button properties. important tells the item to ignore any preceding/default properties being applied to the item*/
 #me {
 	color: white !important;
 	border-radius: 0px;
@@ -170,21 +179,13 @@ header .overlay {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	
-	
 }
 
-
-header #experience-link {
-	color: white;
-	background-color: #333 !important;
-	padding: 10px  5px;
-	transition: all .5s ease-in-out;
+/* arrow button prompt */
+#arrow-prompt {
+	font-size: 14px;
 }
 
-header #experience-link:hover {
-	background-color: black !important;
-}
 
 /*experience section starts here */
 #experience {
@@ -440,7 +441,6 @@ animation specifically for ie 10*/
 	color: white;
 }
 
-/*card's properties*/
 .business-card {
 	min-width: 320px;
 	max-width: 1000px;
@@ -535,10 +535,12 @@ animation specifically for ie 10*/
 	position: static;
 }
 
+#about-me a {
+	margin-top: 30px;
+}
+
+
 /*contact section starts here */
-
-/* contact section */
-
 #contact-form {
 	min-height: 100vh;
 	flex-direction: column;
@@ -590,7 +592,7 @@ animation specifically for ie 10*/
 	margin: 0 auto;
 }
 
-/* contact form properties are below */
+/* contact form properties follow.. */
 #compose-modal {
 	position: fixed;
 	top: 0px;
@@ -679,4 +681,47 @@ animation specifically for ie 10*/
 #compose-modal form button:hover,  #compose-modal form button:focus{
 	background-color: #3F7674;
 	color: white;
+}
+
+#web-development {
+	color: #3F7674;
+	min-height: 100vh;
+	background-color: #333;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+#web-development h3 {
+	font-size: 38px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#web-development .text {
+	background-color: white;
+	min-height: 300px;
+	height: 350px;
+	max-width: 90%;
+	width: 700px;
+	border: 1px solid #0d0d0d;
+	margin: 0 auto;
+	margin-top: 30px;
+	overflow-y: scroll;
+	padding: 10px 20px;
+	text-align: left;
+	border: 3px solid #3F7674;
+}
+
+footer {
+	background-color: #3F7674;
+	color: white;
+	height: 50px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+
 }
