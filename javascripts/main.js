@@ -87,3 +87,102 @@ interests.bind('inview', function (event, visible) {
 		}
 	}
 });
+
+
+//DISPLAYS CONTACT FORM
+
+//button that opens contact form
+var composeButton = document.getElementById('compose-button');
+
+//the contact form
+var contactForm = document.getElementById('compose-modal');
+
+composeButton.onclick = function(){
+  contactForm.style.display = "block";
+}
+
+//CLOSES CONTACT FORM
+
+//button that closes contact form
+var closeButton = document.getElementById('close-button');
+
+closeButton.onclick = function(){
+  contactForm.style.display = "none";
+}
+
+//FUNTION THAT SENDS EMAIL
+function sendEmail(correctCounter) {
+  if (correctCounter == 4) {
+    contactForm.style.display = "none";
+    success.style.display = "block";
+    success.style.opacity = "1";
+    setTimeout(function(){
+        success.style.opacity = "0";
+    }, 3000);
+  }
+}
+
+
+//CHECKS FOR ERRORS IN CONTACT FORM
+function checkErrors() {
+	var firstName = document.getElementById('first-name');
+	var lastName = document.getElementById('last-name');
+	var subject = document.getElementById('compose-subject');
+	var message = document.getElementById('compose-message');
+	var regex = /[\d \s]/g;
+  var specialChar = /[! @ # $ % ^ & * ( ) \[ \] - _ = + \ | / ? . > < ,  " : ; ` ~]/g;
+  var regex2 = /[a-zA-Z0-9]/g;
+  /* this counter will keep track of how many of the form fields are correct.
+  this will be used to decide if the form should display the success message. */
+  var correctCounter = 0;
+
+	if(firstName.value == "" || regex.test(firstName.value) == true || specialChar.test(firstName.value) == true) {
+		firstName.style.borderColor = "crimson";
+		firstName.style.boxShadow = " 0px 0px 5px 5px crimson";
+		firstName.placeholder = "Enter your first name here";
+		firstName.value = "";
+	}
+
+	else {
+		firstName.style.borderColor = "#3F7674";
+		firstName.style.boxShadow = " 0px 0px 5px 5px #3F7674";
+    correctCounter++;
+	}
+
+	if(lastName.value == "" || regex.test(lastName.value) == true || specialChar.test(firstName.value) == true) {
+		lastName.style.borderColor = "crimson";
+		lastName.style.boxShadow = " 0px 0px 5px 5px crimson";
+		lastName.placeholder = "Enter your last name here";
+		lastName.value = "";
+	}
+	else {
+		lastName.style.borderColor = "#3F7674";
+		lastName.style.boxShadow = " 0px 0px 5px 5px #3F7674";
+    correctCounter++;
+	}
+
+	if(subject.value == "" || regex2.test(subject.value) == false || specialChar.test(subject.value) == true) {
+		subject.style.borderColor = "crimson";
+		subject.style.boxShadow = " 0px 0px 5px 5px crimson";
+		subject.placeholder = "You must enter a subject";
+	}
+	else  {
+		subject.style.borderColor = "#3F7674";
+		subject.style.boxShadow = " 0px 0px 5px 5px #3F7674";
+    correctCounter++;
+	}
+
+	if(message.value == "" || regex2.test(message.value) == false) {
+		message.style.borderColor = "crimson";
+		message.style.boxShadow = " 0px 0px 5px 5px crimson";
+		message.placeholder = "You must enter a message";
+	}
+	else {
+		message.style.borderColor = "#3F7674";
+		message.style.boxShadow = " 0px 0px 5px 5px #3F7674";
+    correctCounter++;
+	}
+
+  sendEmail(correctCounter);
+}
+

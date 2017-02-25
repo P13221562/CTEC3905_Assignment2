@@ -215,7 +215,6 @@
 							<div class="point point4">2017 - Graduated from De Montfort University with BSc Computer Science (Hons)</div>
 							<div class="point point5">2017/2018 - Started Masters Degree</div>
 					</div>
-						<a class="arrow" onclick="smoothScroll('interests')" ><img src="images/down-arrow-black.png" width="50" height="50" alt="down arrow"></a>
 			</div>
 
 			<!-- interests section starts here -->
@@ -238,7 +237,6 @@
 						<p>Macmillan Volunteer </p style = "margin:0">
 						<img src="images/checkbox.svg" width="75" height="75" alt="checked checkbox">
 					</div>
-					<a class="arrow" onclick="smoothScroll('about-me')" ><img src="images/down-arrow-black.png" width="50" height="50" alt="down arrow"></a>
 				</div>
 			</div>
 
@@ -279,7 +277,6 @@
 				<h3>Contact Me</h3>
 				<a href="#compose-modal" data-toggle="modal" id="compose-button" class="flexbox hidden"> <p>Click here to send message</p> <img src="images/mail.png" width="125"  height="125" alt="envelope"></a>
 				<br>
-				<a id="authorize-button" class="btn btn-primary pull-right hidden flexbox">Sign In</a>
 				<br>
 				<br>
 				<!-- success message on form submission -->
@@ -287,14 +284,19 @@
 			</div>
 			
 		<!-- form starts here -->
-		<form>		
+		<div class="modal fade" id="compose-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <form>
+        <div class="modal-body">
 		  <h4 class="modal-title">Get In Touch to Discuss Your Requirements and My Skills</h4>
           <div class="form-group">
-		    <!-- If this website uses a web host in the future,the input box for the contact form will be hidden, ITS VALUE WILL BE AN EMAIL ADDRESS -->
-            <input style=" display: none;visibility:hidden;" type="email" class="form-control" id="compose-to" placeholder="To" value="email address would go here" disabled required />
+		    <!-- THIS INPUT BOX WILL BE HIDDEN, ITS VALUE WILL BE YOUR EMAIL ADDRESS -->
+            <input style=" display: none;visibility:hidden;" type="email" class="form-control" id="compose-to" placeholder="To" value="projecttest482@gmail.com" disabled required />
           </div>
-		
-			<!-- form's input-fields -->
+
 		  <div class="form-group">
             <input type="text" class="form-control" id="first-name" placeholder="First Name" required />
           </div>
@@ -312,10 +314,13 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button onclick="checkErrors();" type="submit" id="send-button" class="btn btn-primary">Send</button>
+          <button id="close-button">Close</button>
+          <button onclick="checkErrors();" id="send-button" >Send</button>
         </div>
       </form>
+    </div>
+  </div>
+</div>
 	  
 	  <!-- Web Development section starts here -->
 	  <div id="web-development" class="flexbox">

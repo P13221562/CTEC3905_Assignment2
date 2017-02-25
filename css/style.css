@@ -534,3 +534,149 @@ animation specifically for ie 10*/
 	vertical-align: middle;
 	position: static;
 }
+
+/*contact section starts here */
+
+/* contact section */
+
+#contact-form {
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#contact-form h3 {
+	font-size: 32px;
+}
+
+/* button that opens contact form */
+#contact-form a.flexbox{
+	background-color: #3F7674;
+	color: white;
+	border: none;
+	max-width: 300px;
+	display: inline-block;
+	padding: 20px 50px;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0px 0px 0px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+#contact-form a.flexbox:hover {
+	background-color: #254645;
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	box-shadow: -5px 5px 10px #3f3f3f;
+}
+
+#contact-form #success {
+	background-color: lightgreen;
+	display: inline-block;
+	position: fixed;
+	top: 100px;
+	left: 50px;
+	padding: 10px;
+	border-radius: 50px;
+	display: none;
+	transition: all 1s ease;
+}
+
+
+#contact-form a {
+	margin: 0 auto;
+}
+
+/* contact form properties are below */
+#compose-modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 500;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0, .8);
+}
+
+#compose-modal form {
+	border: 3px solid #3F7674;
+	background-color: white;
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	padding: 0px 0px 20px 0px;
+	border-top-right-radius:15px;
+	border-top-left-radius:15px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#compose-modal h4 {
+	background-color: #3F7674;
+	padding: 20px 0px;
+	border-width: 2px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: white;
+	font-size: 20px;
+	font-family: mada;
+	text-align: center;
+}
+
+#compose-modal form input, #compose-modal form textarea {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	box-shadow: -5px 5px 5px #3F7674;
+	border: none;
+	padding: 5px 10px;
+	max-width: 300px;
+	width: 90%;
+	border-left: 2px solid #3F7674;
+	border-bottom: 2px solid #3F7674;
+	transition: all .3s ease;
+	font-family: mada;
+}
+
+#compose-modal form input:focus,  #compose-modal form textarea:focus {
+	border: 3px solid #3F7674;
+	transform: scale(1.1);
+	box-shadow: 0px 0px 5px 5px #3F7674;
+}
+
+.modal-footer {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#compose-modal form button {
+	background-color: transparent;
+	padding: 10px 5px;
+	color: #3F7674;
+	font-weight: bold;
+	border: 3px solid #3F7674;
+	border-radius: 5px;
+	transition: all .3s ease-in-out;
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+#compose-modal form button:hover,  #compose-modal form button:focus{
+	background-color: #3F7674;
+	color: white;
+}
