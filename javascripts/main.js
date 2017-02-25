@@ -70,4 +70,20 @@ timeline.bind('inview', function (event, visible) {
   }
 });
 
+//INTERESTS ANIMATION
+var interests = $("#interests");
+var children = $(".interests .row");
 
+interests.bind('inview', function (event, visible) {
+
+	if (visible == true) {
+		for(i = 0, j = 1000; i  < children.length; i++, j+= 1000){
+			$(children[i]).css('visibility','visible').hide().delay(j).slideDown(300);
+		}
+	}
+	else {
+		for(i = 0; i  < children.length; i++){
+			$(children[i]).slideUp(0);
+		}
+	}
+});
