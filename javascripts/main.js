@@ -151,7 +151,7 @@ interests.bind('inview', function (event, visible) {
 });
 
 
-//DISPLAYS CONTACT FORM
+//Following DISPLAYS CONTACT FORM
 
 //button that opens contact form
 var composeButton = document.getElementById('compose-button');
@@ -187,11 +187,11 @@ function sendEmail(correctCounter) {
 
 //CHECKS FOR ERRORS IN CONTACT FORM
 function checkErrors() {
-	var firstName = document.getElementById('first-name');
-	var lastName = document.getElementById('last-name');
-	var subject = document.getElementById('compose-subject');
-	var message = document.getElementById('compose-message');
-	var regex = /[\d \s]/g;
+  var firstName = document.getElementById('first-name');
+  var lastName = document.getElementById('last-name');
+  var subject = document.getElementById('compose-subject');
+  var message = document.getElementById('compose-message');
+  var regex = /[\d \s]/g;
   var specialChar = /[! @ # $ % ^ & * ( ) \[ \] - _ = + \ | / ? . > < ,  " : ; ` ~]/g;
   var regex2 = /[a-zA-Z0-9]/g;
   /* this counter will keep track of how many of the form fields are correct.
@@ -201,7 +201,7 @@ function checkErrors() {
 	if(firstName.value == "" || regex.test(firstName.value) == true || specialChar.test(firstName.value) == true) {
 		firstName.style.borderColor = "crimson";
 		firstName.style.boxShadow = " 0px 0px 5px 5px crimson";
-		firstName.placeholder = "Enter your first name here";
+		firstName.placeholder = "Enter your first name here. Numbers not allowed";
 		firstName.value = "";
 	}
 
@@ -214,7 +214,7 @@ function checkErrors() {
 	if(lastName.value == "" || regex.test(lastName.value) == true || specialChar.test(firstName.value) == true) {
 		lastName.style.borderColor = "crimson";
 		lastName.style.boxShadow = " 0px 0px 5px 5px crimson";
-		lastName.placeholder = "Enter your last name here";
+		lastName.placeholder = "Enter your last name here. Numbers not allowed";
 		lastName.value = "";
 	}
 	else {
@@ -228,8 +228,8 @@ function checkErrors() {
 		subject.style.boxShadow = " 0px 0px 5px 5px crimson";
 		subject.placeholder = "You must enter a subject";
 	}
-	else  {
-		subject.style.borderColor = "#3F7674";
+	else  {   //changed code to make sure that the "message sent successfully displays properly as it didn't do so in previous commit.
+		subject.style.borderColor = "#3F7674";  
 		subject.style.boxShadow = " 0px 0px 5px 5px #3F7674";
     correctCounter++;
 	}
@@ -239,7 +239,10 @@ function checkErrors() {
 		message.style.boxShadow = " 0px 0px 5px 5px crimson";
 		message.placeholder = "You must enter a message";
 	}
-	
-
+	else {
+		message.style.borderColor = "#3F7674";
+		message.style.boxShadow = " 0px 0px 5px 5px #3F7674";
+    correctCounter++;
+	}
   sendEmail(correctCounter);
 }

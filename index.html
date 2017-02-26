@@ -326,7 +326,7 @@
 		  <div class="form-group">
             <input type="text" class="form-control" id="first-name" placeholder="First Name" required />
           </div>
-
+			<!-- "required" will enable the "Please fill in this field" message appear when user tries to submit the field emply -->
 		  <div class="form-group">
             <input type="text" class="form-control" id="last-name" placeholder="Last Name" required />
           </div>
@@ -339,8 +339,8 @@
             <textarea class="form-control" id="compose-message" placeholder="Message" rows="10" required></textarea>
           </div>
 		  <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button onclick="checkErrors();" type="submit" id="send-button" class="btn btn-primary">Send</button>
+          <button id="close-button">Close</button>
+          <button onclick="checkErrors();" id="send-button" >Send</button>
         </div>
     </div>
 	
@@ -385,7 +385,6 @@
 		
 		<!-- scripts -->
 
-
 		<!--jQuery CDN. jQuery Documentation: http://api.jquery.com/
 		Reference : https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -400,8 +399,6 @@
 			 empty on safari.
 			 Documentation: https://afarkas.github.io/webshim/demos/ -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/dev/polyfiller.js"></script>
-		
-		
-		
+				
 	</body>
 </html>
