@@ -1,3 +1,65 @@
+//Hand-written code (includes references)
+
+var header = document.getElementsByTagName('header')[0];
+/*reference: https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp*/
+
+var  navLinks = document.getElementsByClassName('mobile-nav-links')[0];
+/*https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName*/
+
+var  navOverlay = document.getElementsByClassName('transparent-overlay')[0];
+
+header.style.marginTop = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
+//The offsetHeight property returns the viewable height of an element in pixels, including padding, border and scrollbar, but not the margin.
+
+navLinks.style.top = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
+
+navOverlay.style.top = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
+
+
+//onresize helps resize the window
+window.onresize = function () {
+    header.style.marginTop = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
+	navLinks.style.top = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
+	navOverlay.style.top = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
+}
+
+
+//SMOOTH SCROLLING EFFECT
+var smoothScroll = function(elementId) {
+    var MIN_PIXELS_PER_STEP = 5;
+    var MAX_SCROLL_STEPS = 60;
+    var target = document.getElementById(elementId);
+    var scrollContainer = target;
+    do {
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = -50;
+    do {
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+                                 (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+
+    var stepFunc = function() {
+        scrollContainer.scrollTop =
+            Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+
+        if (scrollContainer.scrollTop >= targetY) {
+            return;
+        }
+
+        window.requestAnimationFrame(stepFunc);
+    };
+
+    window.requestAnimationFrame(stepFunc);
+}
+
+
 //TIMELINE ANIMATION in Javascript
 
 var timeline = $('#timeline');
@@ -181,5 +243,3 @@ function checkErrors() {
 
   sendEmail(correctCounter);
 }
-
-
