@@ -228,7 +228,7 @@ function checkErrors() {
 		subject.style.boxShadow = " 0px 0px 5px 5px crimson";
 		subject.placeholder = "You must enter a subject";
 	}
-	else  {   //changed code to make sure that the "message sent successfully displays properly as it didn't do so in previous commit.
+	else  {    
 		subject.style.borderColor = "#3F7674";  
 		subject.style.boxShadow = " 0px 0px 5px 5px #3F7674";
     correctCounter++;
