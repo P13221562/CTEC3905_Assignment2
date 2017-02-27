@@ -228,8 +228,8 @@ function checkErrors() {
 		subject.style.boxShadow = " 0px 0px 5px 5px crimson";
 		subject.placeholder = "You must enter a subject";
 	}
-	else  {    
-		subject.style.borderColor = "#3F7674";  
+	else  {
+		subject.style.borderColor = "#3F7674";
 		subject.style.boxShadow = " 0px 0px 5px 5px #3F7674";
     correctCounter++;
 	}
