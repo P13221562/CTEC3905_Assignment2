@@ -7,12 +7,9 @@ var  navLinks = document.getElementsByClassName('mobile-nav-links')[0];  //added
 /*reference: https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName*/
 
 var  navOverlay = document.getElementsByClassName('transparent-overlay')[0];
-
 header.style.marginTop = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
 //The offsetHeight property returns the viewable height of an element in pixels, including padding, border and scrollbar, but not the margin.
-
 navLinks.style.top = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
-
 navOverlay.style.top = (document.getElementsByTagName('nav')[0].offsetHeight + 5) + "px";
 
 
@@ -59,9 +56,46 @@ var smoothScroll = function(elementId) {
     window.requestAnimationFrame(stepFunc);
 }
 
+//MOBILE NAV ANIMATION
+
+function mobileNav() {
+	var mobileNav = document.getElementsByClassName('mobile-nav')[0];
+	var mobileNavLinks = document.getElementsByClassName('mobile-nav-links')[0];
+	var mobileNavButton = document.getElementById('mobile-nav-button');
+	var overlay = document.getElementsByClassName('transparent-overlay')[0];
+	if(mobileNavLinks.style.marginLeft == "0%") {
+		mobileNavLinks.style.marginLeft = "-50%";
+		mobileNavLinks.style.top = mobileNav.height;
+		mobileNavButton.innerHTML = "MENU";
+		overlay.style.opacity = 0;
+		overlay.style.display = "none";
+	}
+	else {
+		mobileNavLinks.style.marginLeft = "0%";
+		mobileNavButton.innerHTML = "CLOSE";
+		overlay.style.opacity = 1;
+		overlay.style.display = "block";
+	}
+
+}
+
+function closeNav() {
+	var mobileNav = document.getElementsByClassName('mobile-nav')[0];
+	var mobileNavLinks = document.getElementsByClassName('mobile-nav-links')[0];
+	var mobileNavButton = document.getElementById('mobile-nav-button');
+	var overlay = document.getElementsByClassName('transparent-overlay')[0];
+
+	mobileNavLinks.style.marginLeft = "-50%";
+	mobileNavLinks.style.top = mobileNav.height;
+	mobileNavButton.innerHTML = "MENU";
+	overlay.style.opacity = 0;
+	overlay.style.display = "none";
+
+}
+
+//END OF MOBILE NAV ANIMATION
 
 //TIMELINE ANIMATION in Javascript
-
 var timeline = $('#timeline');
 
 timeline.bind('inview', function (event, visible) {
@@ -131,6 +165,23 @@ timeline.bind('inview', function (event, visible) {
 	$('.date5').animate({'opacity': '0'});
   }
 });
+
+//mobile timeline animation
+$('.mobile-line').bind('inview', function (event, visible) {
+  if (visible == true) {
+	  $('.mobile-line').animate({
+		  'height': '370px'
+	  });
+	  $('.mobile-line').children($('.point')).delay(2000).slideDown();
+	}
+	else {
+	  $('.mobile-line').animate({
+		'height': '0px'
+	  });
+	  $('.mobile-line').children($('.point')).slideUp();
+	}
+});
+//END OF TIMELINE ANIMATION
 
 //INTERESTS ANIMATION
 var interests = $("#interests");
@@ -246,43 +297,3 @@ function checkErrors() {
 	}
   sendEmail(correctCounter);
 }
-
-//MOBILE NAV ANIMATION
-
-function mobileNav() {
-	var mobileNav = document.getElementsByClassName('mobile-nav')[0];
-	var mobileNavLinks = document.getElementsByClassName('mobile-nav-links')[0];
-	var mobileNavButton = document.getElementById('mobile-nav-button');
-	var overlay = document.getElementsByClassName('transparent-overlay')[0];
-	if(mobileNavLinks.style.marginLeft == "0%") {
-		mobileNavLinks.style.marginLeft = "-50%";
-		mobileNavLinks.style.top = mobileNav.height;
-		mobileNavButton.innerHTML = "MENU";
-		overlay.style.opacity = 0;
-		overlay.style.display = "none";
-	}
-	else {
-		mobileNavLinks.style.marginLeft = "0%";
-		mobileNavButton.innerHTML = "CLOSE";
-		overlay.style.opacity = 1;
-		overlay.style.display = "block";
-	}
-
-}
-
-//function for closing nav on mobile phone
-function closeNav() {
-	var mobileNav = document.getElementsByClassName('mobile-nav')[0];
-	var mobileNavLinks = document.getElementsByClassName('mobile-nav-links')[0];
-	var mobileNavButton = document.getElementById('mobile-nav-button');
-	var overlay = document.getElementsByClassName('transparent-overlay')[0];
-
-	mobileNavLinks.style.marginLeft = "-50%";
-	mobileNavLinks.style.top = mobileNav.height;
-	mobileNavButton.innerHTML = "MENU";
-	overlay.style.opacity = 0;
-	overlay.style.display = "none";
-
-}
-
-//END OF MOBILE NAV ANIMATION

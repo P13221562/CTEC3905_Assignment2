@@ -184,7 +184,7 @@
 
 	/* timeline on mobile devices */
 	#education #mobile-timeline {
-		background: #ADD8E6;
+		background: #3F7674;
 	    width:125px;
 	    height:125px;
 	    border-radius:50%;
@@ -195,18 +195,17 @@
 	}
 
 	#mobile-timeline  p {
-		color: #34495e;
+		color: white;
 		font-size: 22px;
 		font-weight: 700;
 	}
 
 	.mobile-line {
 		display: block;
-		background-color: #ADD8E6;
 		height: 0px;
 		width: 6px;
 		margin: 0 auto;
-		background:#ADD8E6;
+		background:#3F7674;
 		transition: all 0.6s 0.2s;
 		position: relative;
 		top: -21px;
@@ -214,7 +213,7 @@
 
 	.mobile-line .point {
 		 background-color: white;
-		 border: 6px solid #ADD8E6;
+		 border: 6px solid #3F7674;
 		 border-radius: 10px;
 		 margin: 0 auto;
 		 display: none;
