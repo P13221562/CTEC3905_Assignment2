@@ -703,6 +703,7 @@ animation specifically for ie 10*/
 	font-size: 38px;
 	font-weight: bold;
 	text-align: center;
+	color : white;
 }
 
 #web-development .text {
@@ -732,8 +733,6 @@ margin: 10px 30px;
 .mob_design {
 margin: 10px 250px;
 }
-
-
 
 footer {
 	background-color: #3F7674;
