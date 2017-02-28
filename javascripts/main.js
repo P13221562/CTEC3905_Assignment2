@@ -3,8 +3,8 @@
 var header = document.getElementsByTagName('header')[0];
 /*reference: https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp*/
 
-var  navLinks = document.getElementsByClassName('mobile-nav-links')[0];
-/*https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName*/
+var  navLinks = document.getElementsByClassName('mobile-nav-links')[0];  //added this in previous commits
+/*reference: https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName*/
 
 var  navOverlay = document.getElementsByClassName('transparent-overlay')[0];
 
@@ -246,3 +246,43 @@ function checkErrors() {
 	}
   sendEmail(correctCounter);
 }
+
+//MOBILE NAV ANIMATION
+
+function mobileNav() {
+	var mobileNav = document.getElementsByClassName('mobile-nav')[0];
+	var mobileNavLinks = document.getElementsByClassName('mobile-nav-links')[0];
+	var mobileNavButton = document.getElementById('mobile-nav-button');
+	var overlay = document.getElementsByClassName('transparent-overlay')[0];
+	if(mobileNavLinks.style.marginLeft == "0%") {
+		mobileNavLinks.style.marginLeft = "-50%";
+		mobileNavLinks.style.top = mobileNav.height;
+		mobileNavButton.innerHTML = "MENU";
+		overlay.style.opacity = 0;
+		overlay.style.display = "none";
+	}
+	else {
+		mobileNavLinks.style.marginLeft = "0%";
+		mobileNavButton.innerHTML = "CLOSE";
+		overlay.style.opacity = 1;
+		overlay.style.display = "block";
+	}
+
+}
+
+//function for closing nav on mobile phone
+function closeNav() {
+	var mobileNav = document.getElementsByClassName('mobile-nav')[0];
+	var mobileNavLinks = document.getElementsByClassName('mobile-nav-links')[0];
+	var mobileNavButton = document.getElementById('mobile-nav-button');
+	var overlay = document.getElementsByClassName('transparent-overlay')[0];
+
+	mobileNavLinks.style.marginLeft = "-50%";
+	mobileNavLinks.style.top = mobileNav.height;
+	mobileNavButton.innerHTML = "MENU";
+	overlay.style.opacity = 0;
+	overlay.style.display = "none";
+
+}
+
+//END OF MOBILE NAV ANIMATION

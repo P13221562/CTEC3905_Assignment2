@@ -716,6 +716,21 @@ animation specifically for ie 10*/
 	border: 3px solid #3F7674;
 }
 
+#web-development .text p{
+	color: black;
+	margin: 0px 30px;
+}
+
+.desktop_design{
+margin: 10px 30px;	
+}
+
+.mob_design {
+margin: 10px 250px;
+}
+
+
+
 footer {
 	background-color: #3F7674;
 	color: white;
