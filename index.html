@@ -315,7 +315,8 @@
 					<div class="modal-content">
 						<div class="modal-header"></div>		
 							<!-- form starts here -->
-							<form>		
+							<form class="form" onsubmit="checkErrors(); return false;" >
+								<div class="modal-body">							
 									<h4 class="modal-title">Get In Touch to Discuss Your Requirements and My Skills</h4>
 								<div class="form-group">
 								<!-- If this website uses a web host in the future,the input box for the contact form will be hidden, ITS VALUE WILL BE AN EMAIL ADDRESS -->
@@ -335,6 +336,7 @@
 
 								<div class="form-group">
 								<textarea class="form-control" id="compose-message" placeholder="Message" rows="10" required></textarea>
+								</div>
 								</div>
 								<div class="modal-footer">
 									<button id="close-button">Close</button>

@@ -202,7 +202,7 @@ interests.bind('inview', function (event, visible) {
 });
 
 
-//Following DISPLAYS CONTACT FORM
+//FOLLOWING CODE IS FOR THE CONTACT FORM
 
 //button that opens contact form
 var composeButton = document.getElementById('compose-button');
@@ -213,8 +213,6 @@ var contactForm = document.getElementById('compose-modal');
 composeButton.onclick = function(){
   contactForm.style.display = "block";
 }
-
-//CLOSES CONTACT FORM
 
 //button that closes contact form
 var closeButton = document.getElementById('close-button');
@@ -236,35 +234,36 @@ function sendEmail(correctCounter) {
 }
 
 
-//CHECKS FOR ERRORS IN CONTACT FORM
+//The following checks for errors in the form
 function checkErrors() {
   var firstName = document.getElementById('first-name');
   var lastName = document.getElementById('last-name');
   var subject = document.getElementById('compose-subject');
   var message = document.getElementById('compose-message');
-  var regex = /[\d \s]/g;
+  // The following JavaScript Regular Expressions (RegExp) are from : https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+  var RegExp = /[\d \s]/g;
   var specialChar = /[! @ # $ % ^ & * ( ) \[ \] - _ = + \ | / ? . > < ,  " : ; ` ~]/g;
-  var regex2 = /[a-zA-Z0-9]/g;
-  /* this counter will keep track of how many of the form fields are correct.
-  this will be used to decide if the form should display the success message. */
+  var RegExp = /[a-zA-Z0-9]/g;
+  /* the following counter will keep track of whether the form fields are correct.
+  it will decide if the form should display the success message or not. */
   var correctCounter = 0;
 
-	if(firstName.value == "" || regex.test(firstName.value) == true || specialChar.test(firstName.value) == true) {
-		firstName.style.borderColor = "crimson";
-		firstName.style.boxShadow = " 0px 0px 5px 5px crimson";
+	if(firstName.value == "" || RegExp.test(firstName.value) == true || specialChar.test(firstName.value) == true) {
+		firstName.style.borderColor = "red";
+		firstName.style.boxShadow = " 0px 0px 5px 5px red";
 		firstName.placeholder = "Enter your first name here. Numbers not allowed";
 		firstName.value = "";
 	}
 
 	else {
-		firstName.style.borderColor = "#3F7674";
+		firstName.style.borderColor = "red";
 		firstName.style.boxShadow = " 0px 0px 5px 5px #3F7674";
     correctCounter++;
 	}
 
-	if(lastName.value == "" || regex.test(lastName.value) == true || specialChar.test(firstName.value) == true) {
-		lastName.style.borderColor = "crimson";
-		lastName.style.boxShadow = " 0px 0px 5px 5px crimson";
+	if(lastName.value == "" || RegExp.test(lastName.value) == true || specialChar.test(firstName.value) == true) {
+		lastName.style.borderColor = "red";
+		lastName.style.boxShadow = " 0px 0px 5px 5px red";
 		lastName.placeholder = "Enter your last name here. Numbers not allowed";
 		lastName.value = "";
 	}
@@ -274,10 +273,10 @@ function checkErrors() {
     correctCounter++;
 	}
 
-	if(subject.value == "" || regex2.test(subject.value) == false || specialChar.test(subject.value) == true) {
-		subject.style.borderColor = "crimson";
-		subject.style.boxShadow = " 0px 0px 5px 5px crimson";
-		subject.placeholder = "You must enter a subject";
+	if(subject.value == "" || RegExp.test(subject.value) == false || specialChar.test(subject.value) == true) {
+		subject.style.borderColor = "red";
+		subject.style.boxShadow = " 0px 0px 5px 5px red";
+		subject.placeholder = "Please enter a subject";
 	}
 	else  {
 		subject.style.borderColor = "#3F7674";
@@ -285,10 +284,10 @@ function checkErrors() {
     correctCounter++;
 	}
 
-	if(message.value == "" || regex2.test(message.value) == false) {
-		message.style.borderColor = "crimson";
-		message.style.boxShadow = " 0px 0px 5px 5px crimson";
-		message.placeholder = "You must enter a message";
+	if(message.value == "" || RegExp.test(message.value) == false) {
+		message.style.borderColor = "red";
+		message.style.boxShadow = " 0px 0px 5px 5px red";
+		message.placeholder = "Please enter a message";
 	}
 	else {
 		message.style.borderColor = "#3F7674";
