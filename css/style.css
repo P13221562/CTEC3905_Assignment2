@@ -723,7 +723,7 @@ animation specifically for ie 10*/
 
 #web-development .text p{
 	color: black;
-	margin: 0px 30px;
+	margin: 0 auto;
 }
 
 .link_to_am_i_responsive{
@@ -731,11 +731,11 @@ animation specifically for ie 10*/
 }
 
 .desktop_design{
-margin: 10px 30px;	
+margin: 0 auto;
 }
 
 .mob_design {
-margin: 10px 250px;
+margin: 0 auto;
 }
 
 footer {
