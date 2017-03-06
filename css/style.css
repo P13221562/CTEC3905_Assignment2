@@ -726,6 +726,10 @@ animation specifically for ie 10*/
 	margin: 0px 30px;
 }
 
+.link_to_am_i_responsive{
+	margin: 0 auto;
+}
+
 .desktop_design{
 margin: 10px 30px;	
 }
