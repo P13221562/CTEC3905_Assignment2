@@ -51,10 +51,6 @@
 	opacity: 0;
 }
 
-/* point */
-.point1 {
-	
-}
 
 .line1 {
 	top: 42.5px;
@@ -64,11 +60,6 @@
 .date1 {
 	top: 30px;
 	left: 75px;
-}
-
-/* point 2 */
-.point2 {
-	
 }
 
 .line2 {
@@ -81,11 +72,6 @@
 	left: -250px;
 }
 
-/* point 3 */
-.point3 {
-	
-}
-
 .line3 {
 	top: 162.5px;
 	left: 7px;
@@ -96,11 +82,6 @@
 	left: 75px;
 }
 
-/* point 4 */
-.point4 {
-	
-}
-
 .line4 {
 	top: 222.5px;
 	left: -50px;
@@ -109,11 +90,6 @@
 .date4 {
 	top: 222.5px;
 	left: -250px;
-}
-
-/* point 5 */
-.point5 {
-	
 }
 
 .line5 {

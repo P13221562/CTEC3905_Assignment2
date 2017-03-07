@@ -20,7 +20,7 @@
 		z-index: 500;
 	}
 
-	/* transparent background for mobile nav */
+/* transparent background for mobile nav */
 	nav .transparent-overlay {
 		display: none;
 		opacity: 0;
@@ -153,7 +153,7 @@
 		flex: none !important;
 	}
 
-	/* Gmail API Contact Form */
+/* Gmail API Contact Form */
 	#compose-modal .form {
 
 	}
@@ -182,7 +182,7 @@
 		display: block;
 	}
 
-	/* timeline on mobile devices */
+/* timeline on mobile devices */
 	#education #mobile-timeline {
 		background: #3F7674;
 	    width:125px;

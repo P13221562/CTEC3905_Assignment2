@@ -33,7 +33,6 @@ a:hover, button:hover {
 	cursor: pointer;
 }
 
-
 /* navigation bar properties are below */
 
 nav {
@@ -196,6 +195,7 @@ header .overlay {
 	font-size: 24px;
 	color: skyblue;
 	text-align: center;
+	
 }
 
 #experience .row {
@@ -314,6 +314,11 @@ animation specifically for ie 10*/
 	background-color: white;
 }
 
+#experience .text li {
+	color: #3F7674;
+	font-size: 18px;
+}
+
 #experience .text p {
 	max-width: 400px;
 	color: #3F7674;
@@ -404,8 +409,6 @@ animation specifically for ie 10*/
 	font-family: "Special Elite";
 }
 
-
-
 .interests .row * {
 	display: inline-block;
 	vertical-align: middle;	
@@ -418,9 +421,6 @@ animation specifically for ie 10*/
 	left: 50%;
 	transform: translateX(-50%);
 }
-
-
-
 
 /* about me section */
 
@@ -479,6 +479,7 @@ animation specifically for ie 10*/
 	flex: 1.5;
 	background-color: white;
 }
+
 .business-card .card-content img {
 	position: absolute;
 	top: 0px;
@@ -496,7 +497,6 @@ animation specifically for ie 10*/
 .business-card .card-text h5 {
 	font-size: 18px;
 }
-
 
 .business-card .card-text .grayed-out {
 	color: dimgray;
@@ -726,8 +726,14 @@ animation specifically for ie 10*/
 	margin: 0 auto;
 }
 
+#web-development li{
+	color: black;
+}
+
+
+/** margin: 0 auto adjusts item as per the window's size **/
 .text img{
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 .link_to_am_i_responsive{
@@ -735,11 +741,11 @@ margin: 0 auto;
 }
 
 .desktop_design{
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 .mob_design {
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 footer {
