@@ -308,7 +308,6 @@ animation specifically for ie 10*/
 }
 
 #experience .text {
-	text-align: left;
 	padding: 10px;
 	border: 5px solid #3F7674;
 	background-color: white;
@@ -726,9 +725,6 @@ animation specifically for ie 10*/
 	margin: 0 auto;
 }
 
-#web-development li{
-	color: black;
-}
 
 
 /** margin: 0 auto adjusts item as per the window's size **/
