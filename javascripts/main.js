@@ -240,10 +240,10 @@ function checkErrors() {
   var lastName = document.getElementById('last-name');
   var subject = document.getElementById('compose-subject');
   var message = document.getElementById('compose-message');
-  // The following JavaScript Regular Expressions (RegExp) are from : https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+  /* The following JavaScript Regular Expressions (RegExp) are from : https://www.w3schools.com/jsref/jsref_obj_regexp.asp */
   var RegExp = /[\d \s]/g;
   var specialChar = /[! @ # $ % ^ & * ( ) \[ \] - _ = + \ | / ? . > < ,  " : ; ` ~]/g;
-  var RegExp = /[a-zA-Z0-9]/g;
+  var RegExp2 = /[a-zA-Z0-9]/g;
   /* the following counter will keep track of whether the form fields are correct.
   it will decide if the form should display the success message or not. */
   var correctCounter = 0;
@@ -256,7 +256,7 @@ function checkErrors() {
 	}
 
 	else {
-		firstName.style.borderColor = "red";
+		firstName.style.borderColor = "#3F7674";
 		firstName.style.boxShadow = " 0px 0px 5px 5px #3F7674";
     correctCounter++;
 	}
@@ -273,7 +273,7 @@ function checkErrors() {
     correctCounter++;
 	}
 
-	if(subject.value == "" || RegExp.test(subject.value) == false || specialChar.test(subject.value) == true) {
+	if(subject.value == "" || RegExp2.test(subject.value) == false || specialChar.test(subject.value) == true) {
 		subject.style.borderColor = "red";
 		subject.style.boxShadow = " 0px 0px 5px 5px red";
 		subject.placeholder = "Please enter a subject";
@@ -284,7 +284,7 @@ function checkErrors() {
     correctCounter++;
 	}
 
-	if(message.value == "" || RegExp.test(message.value) == false) {
+	if(message.value == "" || RegExp2.test(message.value) == false) {
 		message.style.borderColor = "red";
 		message.style.boxShadow = " 0px 0px 5px 5px red";
 		message.placeholder = "Please enter a message";
